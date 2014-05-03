@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 5</title>
+	<link type="text/css" rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header>
+		<a href="#">Apple</a>
+		<a href="#">Toshiba</a>
+		<a href="#">Lenovo</a>
+		<a href="#">Dell</a>
+		<a href="#">Asus</a>
+		<a href="#">Acer</a>
+		<a href="#">HP</a>
+	</header>
+	<hr>
+	<div id="outherFrame">
+		<div class="saleItem">
+			<fieldset>
+				<legend>Apple MacBook Air</legend>
+				<div class="photo">
+					<img src="img\laptop.png" alt="laptop"></img>
+					<div>1300 USD</div>
+				</div>
+				<div class="specs">
+					<p>64 GB SSD</p>
+					<p>2 GB DDR</p>
+					<p>Intel Core i5</p>
+				</div>
+			</fieldset>
+		</div>
+		<div class="saleItem">
+			<fieldset>
+				<legend>Apple MacBook Air</legend>
+				<div class="photo">
+					<img src="img\laptop.png" alt="laptop"></img>
+					<div>1300 USD</div>
+				</div>
+				<div class="specs">
+					<p>64 GB SSD</p>
+					<p>2 GB DDR</p>
+					<p>Intel Core i5</p>
+				</div>
+			</fieldset>
+		</div>
+		<div class="saleItem">
+			<fieldset>
+				<legend>Apple MacBook Air</legend>
+				<div class="photo">
+					<img src="img\laptop.png" alt="laptop"></img>
+					<div>1300 USD</div>
+				</div>
+				<div class="specs">
+					<p>64 GB SSD</p>
+					<p>2 GB DDR</p>
+					<p>Intel Core i5</p>
+				</div>
+			</fieldset>
+		</div>
+		<div class="saleItem">
+			<fieldset>
+				<legend>Apple MacBook Air</legend>
+				<div class="photo">
+					<img src="img\laptop.png" alt="laptop"></img>
+					<div>1300 USD</div>
+				</div>
+				<div class="specs">
+					<p>64 GB SSD</p>
+					<p>2 GB DDR</p>
+					<p>Intel Core i5</p>
+				</div>
+			</fieldset>
+		</div>
+		<div class="saleItem">
+			<fieldset>
+				<legend>Apple MacBook Air</legend>
+				<div class="photo">
+					<img src="img\laptop.png" alt="laptop"></img>
+					<div>1300 USD</div>
+				</div>
+				<div class="specs">
+					<p>64 GB SSD</p>
+					<p>2 GB DDR</p>
+					<p>Intel Core i5</p>
+				</div>
+			</fieldset>
+		</div>
+		<div class="saleItem">
+			<fieldset>
+				<legend>Apple MacBook Air</legend>
+				<div class="photo">
+					<img src="img\laptop.png" alt="laptop"></img>
+					<div>1300 USD</div>
+				</div>
+				<div class="specs">
+					<p>64 GB SSD</p>
+					<p>2 GB DDR</p>
+					<p>Intel Core i5</p>
+				</div>
+			</fieldset>
+		</div>
+	</div>
+	<div id="selectionFrame">
+		<span>Min price:</span>
+		<span id="minPriceRange">0</span>
+		<span>USD</span> 
+		<input type="range" min="0" max="5000" value="0" onchange="showValue(this.value,'minPriceRange')" />	
+
+		<span>Max price:</span>
+		<span id="maxPriceRange">1000</span>
+		<span>USD</span> 
+		<input type="range" min="0" max="5000" value="1000" onchange="showValue(this.value,'maxPriceRange')" />	
+
+		<span>Min RAM:</span>
+		<span id="minRamRange">4</span>
+		<span>GB</span> 
+		<input type="range" min="0" max="64" step="4" value="4" onchange="showValue(this.value,'minRamRange')" />	
+
+		<span>Max RAM:</span>
+		<span id="maxRamRange">32</span>
+		<span>GB</span> 
+		<input type="range" min="0" max="64" step="4" value="32" onchange="showValue(this.value,'maxRamRange')" />	
+	</div>
+
+
+	<script type="text/javascript">
+		function showValue(newValue,range)
+			{
+				document.getElementById(range).innerHTML=newValue;
+			}
+	</script>
+</body>
+</html>

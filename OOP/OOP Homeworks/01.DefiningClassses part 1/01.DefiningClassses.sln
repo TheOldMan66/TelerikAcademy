@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.GSM.Common", "01.GSM1\01.GSM.Common.csproj", "{16E662A8-DF80-4D9B-AE13-1D52276A5A87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.GSMTest", "07.GSMTest\07.GSMTest.csproj", "{CD3BB622-4BF0-4A4E-8E69-17C60E75C6C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.GSMCallHistoryTest", "12.GSMCallHistoryTest\12.GSMCallHistoryTest.csproj", "{FB40CEEE-7125-4BC0-A24D-E8B7ECBE9BBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16E662A8-DF80-4D9B-AE13-1D52276A5A87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16E662A8-DF80-4D9B-AE13-1D52276A5A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16E662A8-DF80-4D9B-AE13-1D52276A5A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16E662A8-DF80-4D9B-AE13-1D52276A5A87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD3BB622-4BF0-4A4E-8E69-17C60E75C6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3BB622-4BF0-4A4E-8E69-17C60E75C6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3BB622-4BF0-4A4E-8E69-17C60E75C6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3BB622-4BF0-4A4E-8E69-17C60E75C6C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB40CEEE-7125-4BC0-A24D-E8B7ECBE9BBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB40CEEE-7125-4BC0-A24D-E8B7ECBE9BBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB40CEEE-7125-4BC0-A24D-E8B7ECBE9BBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB40CEEE-7125-4BC0-A24D-E8B7ECBE9BBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,5 @@
+/* CSS Document */
+@font-face {font-family:"edwardian";src:url(itcedscr.ttf) format("truetype");}
+* {color:#0094FF;font-family:Consolas;}
+p:first-line {font-weight:bold;}
+p:first-letter {font-family:edwardian;font-size:250%;}

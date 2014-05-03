@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText=" /* We are given a school. In the school there are classes of students. Each class has a set of teachers. &#xD;&#xA;     * Each teacher teaches a set of disciplines. Students have name and unique class number. &#xD;&#xA;     * Classes have unique text identifier. Teachers have name. Disciplines have name, number of lectures and &#xD;&#xA;     * number of exercises. Both teachers and students are people. Students, classes, teachers and disciplines &#xD;&#xA;     * could have optional comments (free text block).&#xD;&#xA;	 * Your task is to identify the classes (in terms of  OOP) and their attributes and operations, encapsulate &#xD;&#xA;     * their fields, define the class hierarchy and create a class diagram with Visual Studio */">
+    <Position X="0.512" Y="3.351" Height="1.431" Width="7.45" />
+  </Comment>
+  <Class Name="_01.School.Person">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>School.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_01.School.Student">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAgAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>School.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_01.School.Teacher">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>School.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_01.School.SchoolClass">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAEAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>School.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_01.School.Discipline">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAAEAAgAAAAAQAAAAEAAAAgAAAAAAAQAA=</HashCode>
+      <FileName>School.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,8 @@
+/* CSS Document */
+body {width:1350px;}
+div {
+	border: 1px solid #F00;
+	border-radius: 100px;
+	padding-right: 3%;
+	background-color: #000;
+}

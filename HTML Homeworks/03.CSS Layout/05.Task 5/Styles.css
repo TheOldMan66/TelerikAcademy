@@ -1,0 +1,65 @@
+/* CSS Document */
+body{
+	font-family: Verdana,Arial;
+	font-weight: bold;
+}
+hr{
+	height:2px;
+	background-color:#000;
+	width: 90%;
+	
+}
+header{
+	text-align: center;
+}
+
+header a{
+	color: #0DF;
+	font-size: 24px;
+	margin:5px;
+}
+
+img{
+	margin:10px;
+	float:left;
+	width: 104px;
+}
+
+#outherFrame{
+	border:3px solid black;
+	display:inline-block;
+	width:560px;
+	padding-bottom:10px;
+	float:left;
+}
+.saleItem{
+	display:inline-block;
+}
+.specs{
+	float:right;
+}
+
+.photo{
+	float:left;
+}
+
+fieldset{
+	border: 3px solid black;
+	width:240px;
+	display:inline-block;
+}
+fieldset legend{
+	text-align:center;
+}
+
+#selectionFrame{
+	float:left;
+	padding-top: 80px;
+	text-align: center;
+}
+
+#selectionFrame input {
+	margin:30px;
+	width: 200px;
+	display: block;
+}

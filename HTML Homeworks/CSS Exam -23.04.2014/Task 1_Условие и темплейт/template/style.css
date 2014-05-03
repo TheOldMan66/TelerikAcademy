@@ -1,0 +1,66 @@
+html, body {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;	
+	color: #575E5B;
+
+}
+
+.clear {
+	clear: both;
+}
+
+header{
+	background-image: url('images/header-bg.png');
+}
+
+header h1{
+	margin: 0; 
+	padding-top: 15px;
+	padding-left: 10px;
+	float: left;
+	text-transform:uppercase;
+	font-size: 16px;
+}
+
+header ul{
+	float: right;
+}
+
+header ul li{
+	font-size: 14px;
+	display: inline-block;
+	padding-right: 20px;
+}
+
+#searchBar{
+	background-color: black;
+	color: #C6C6C6;
+	padding:10px; 
+}
+
+#searchBar a{
+	color: #C6C6C6;
+	text-decoration: none;
+}
+
+#archives{
+	display: inline-block;
+}
+
+
+#search{
+	display: inline-block;
+	float: right;
+}
+
+#content h1{
+	font-size: 24px;
+}
+
+article{
+	font-size: 14px;	
+}
