@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 5 - Check Third Bit</title>
+	<script type="text/javascript">
+		function checkBit(){
+			var input = parseInt(document.getElementById("inpValue").value);
+			var result = document.getElementById("result");
+			if (input & 0x08) {
+				result.innerHTML = "Bit 3 of this number is one";
+			} else {
+				result.innerHTML = "Bit 3 of this number is zero";
+			}
+		}
+	</script>
+</head>
+<body>
+	<label for "inpValue">Enter any positive integer: </label>
+	<input type="text" id="inpValue">
+	<button onclick="checkBit()">Check 3-rd bit</button>
+	<div id="result"></div>
+</body>
+</html>

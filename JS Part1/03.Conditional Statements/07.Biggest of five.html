@@ -1,0 +1,28 @@
+<!-- Write a script that finds the greatest of given 5 variables. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 7 - Biggest of 5 numbers</title>
+	<script type="text/javascript">
+		function biggest(){
+			var arr = document.getElementById("inpFirst").value.split(",");
+			var max = -Number.MAX_VALUE;
+			for (var i = 0; i< arr.length; i++) {
+				if (Number(arr[i]) > max) {
+					 max = arr[i];
+				}
+			}
+			result.innerHTML="Biggest number is " + max;
+		}
+	</script>
+</head>
+<body>
+	<div></div>
+	<label for "inpFirst">Enter 5 (or as many as you wish) integer numbers, separated by comma(",")</label>
+	<input type="text" id="inpFirst">
+	<button onclick="biggest()">Find biggest</button>
+	<div id="result"></div>
+</body>
+</html>

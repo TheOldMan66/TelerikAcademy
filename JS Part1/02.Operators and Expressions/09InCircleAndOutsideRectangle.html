@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 6 - Point and circle</title>
+	<script type="text/javascript">
+		function getDistance(){
+			var result = document.getElementById("result");
+			var pointX = document.getElementById("inpX").value;
+			var pointY = document.getElementById("inpY").value;
+			var inCircle = Math.sqrt((pointX-1) * (pointX-1) + (pointY-1) * (pointY-1)) < 3;
+			var inRectangle = (pointX > -1) && (pointX < 5) && (pointY > -1) && (pointY < 1);
+			if (inCircle && !inRectangle) {
+				result.innerHTML = "Point is inside circle and outside rectangle";
+			} else if (inCircle) {
+				result.innerHTML = "Point is inside circle but inside rectangle too";
+			} else if (inRectangle) {
+				result.innerHTML = "Point is outside circle and inside rectangle";
+			} else {
+				result.innerHTML = "Point is outside circle but outside rectangle";
+			}
+		}
+	</script>
+</head>
+<body>
+	<label for "inpX">Enter X coordinate of point: </label>
+	<input type="text" id="inpX">
+	<br/>
+	<label for "inpY">Enter Y coordinate of point: </label>
+	<input type="text" id="inpY">
+	<button onclick="getDistance()">Where is point?</button>
+	<div id="result"></div>
+</body>
+</html>

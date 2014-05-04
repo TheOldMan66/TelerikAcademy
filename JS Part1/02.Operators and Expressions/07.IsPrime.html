@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 7 - Is number prime?</title>
+	<script type="text/javascript">
+		function prime(){
+			var input = document.getElementById("inpVal").value;
+			var result = document.getElementById("result");
+			var notPrime;
+			for (var i = 2; i <= Math.sqrt(input); i++) {
+				notPrime = input % i === 0;
+				if (notPrime) break;
+			}
+			if (notPrime)
+				alert(" Number " + input + " is not prime.");
+			else
+				alert(" Number " + input + " is prime.");
+		}
+	</script>
+</head>
+<body>
+	<label for "inpVal">Enter positive integer: </label>
+	<input type="text" id="inpVal">
+	<button onclick="prime()">Is prime?</button>
+	<div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!-- Write a script that converts a number in the range [0...999] to a text corresponding to its English pronunciation. Examples:
+	0  'Zero'
+	273  'Two hundred seventy three'
+	400  'Four hundred'
+	501  'Five hundred and one'
+	711  'Seven hundred and eleven' -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 8 - English pronunciation of numbers</title>
+	<script type="text/javascript">
+		function numToStr(){
+			var ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+                     "eleven", "twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
+        	var decimals = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+			var input = parseInt(document.getElementById("inpFirst").value);
+
+            var output = "";
+            if (input < 0 || input > 999) {
+            	alert("Invalid number.");
+            	return;
+            }
+
+            if (input === 0) {
+				output = "zero";
+            } else {
+            	var digit = parseInt(input / 100);
+	            if (digit > 0)
+	            {
+	                output = output + ones[digit] + " hundred ";
+	                if ((input % 100 > 0) && (input % 100 < 20))
+	                {
+	                    output = output + "and ";
+	                }
+	            }
+
+	            digit = input - (digit * 100);
+	            if (digit > 19)
+	            {
+	                output = output + decimals[parseInt(digit / 10)];
+	                if (digit % 10 !== 0)
+	                {
+	                    output = output + " " + ones[digit % 10];
+	                }
+	            }
+	            else
+	            {
+	                output = output + ones[digit];
+	            }
+            }
+			result.innerHTML = output;
+		}
+	</script>
+</head>
+<body>
+	<div></div>
+	<label for "inpFirst">Enter integer in range 0...999:</label>
+	<input type="text" id="inpFirst">
+	<button onclick="numToStr()">Show in english</button>
+	<div id="result"></div>
+</body>
+</html>
