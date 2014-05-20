@@ -1,0 +1,24 @@
+<!-- Write a script that prints all the numbers from 1 to N, that are not divisible by 3 and 7 at the same time. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 1 - Print number from 1 to N</title>
+	<script type="text/javascript">
+		function printN(){
+			var n = parseInt(document.getElementById("inpFirst").value);
+			for (var i = 1; i <= n; i++) {
+				if (i % 3 !== 0 || i % 7 !== 0) {
+					document.writeln(i + ", ");
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<label for "inpFirst">Enter N: </label>
+	<input type="text" id="inpFirst">
+	<button onclick="printN()">Print 0-N</button>
+</body>
+</html>

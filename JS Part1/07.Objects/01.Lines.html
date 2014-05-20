@@ -1,0 +1,143 @@
+<!-- Write functions for working with shapes in  standard Planar coordinate system
+	Points are represented by coordinates P(X, Y)
+	Lines are represented by two points, marking their beginning and ending
+	L(P1(X1,Y1), P2(X2,Y2))
+	Calculate the distance between two points
+	Check if three segment lines can form a triangle. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 1 - Points and lines</title>
+	<style type="text/css">
+		.header 
+		{
+			width:600px; 
+			text-align:center;
+		}
+		.pointNum
+		{
+			display:inline-block; 
+			width:150px;
+		}
+	</style>
+	<script type="text/javascript">
+		function makePoint(x,y) {
+			if (!isNaN(parseFloat(x)) && !isNaN(parseFloat(y))) {
+				return {x: x,
+						y: y,
+						toString: function() {return 'X=' + Number(this.x) + ', Y=' + Number(this.y);}
+				}
+			} else {
+				return null;
+			}
+		}
+
+		function makeLine(start, end) {
+			if (start === null || end === null) {
+				return null;
+			}
+
+			if (start.hasOwnProperty('x') && start.hasOwnProperty('y') &&
+				end.hasOwnProperty('x') && end.hasOwnProperty('y')) {
+				return {start: start,
+						end: end,
+						length: function () {
+							var deltaX = this.start.x - this.end.x;
+							var deltaY = this.start.y - this.end.y;
+							return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+						},
+						toString: function() {
+							return 'Start: ' + this.start + ', End: ' + this.end + '. Length: ' + this.length();
+						}
+				}
+			} else {
+				return null;
+			}
+		}
+
+
+		function calcLineInfo(){
+			var x = 0,
+				y = 0;
+				point = [];
+				line = [];
+				result = document.getElementById('Line1Result');
+
+			for (var i = 1; i < 4; i++) {
+				for (var j = 1; j < 3; j++) {
+					x = document.getElementById('tbLine' + i + 'X' + j).value;
+					y = document.getElementById('tbLine' + i + 'Y' + j).value;
+					point[j] = makePoint(x,y);
+				}
+
+				line[i] = makeLine(point[1], point[2]);
+				result = document.getElementById('Line' + i + 'Result');
+				if (line[i] !== null) {
+					result.innerHTML = 'Line properties: ' + line[i].toString();
+				} else {
+					result.innerHTML = 'Inssuficient or wrong data.';
+				}
+			}
+
+			result = document.getElementById('canFormTriangle');
+			if ((line[1].length() < line[2].length() + line[3].length()) && 
+				(line[2].length() < line[1].length() + line[3].length()) && 
+				(line[3].length() < line[1].length() + line[2].length())) {
+				result.innerHTML="These 3 segments can form a triangle";
+			} else {
+				result.innerHTML="These 3 segments cannot form a triangle";				
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="header">First line:</div>
+	<div class="pointNum">First point of line:</div>
+	<label for "tbLine1X1">X coordinate: </label>
+	<input type="text" id="tbLine1X1">
+	<label for "tbLine1Y1">Y coordinate: </label>
+	<input type="text" id="tbLine1Y1">
+	<br>
+	<div class="pointNum">Second point of line:</div>
+	<label for "tbLine1X2">X coordinate: </label>
+	<input type="text" id="tbLine1X2">
+	<label for "tbFirstLineY2">Y coordinate: </label>
+	<input type="text" id="tbLine1Y2">
+	<div id="Line1Result">Line properties: </div>
+	<br>
+
+	<div class="header">Second line:</div>
+	<div class="pointNum">First point of line:</div>
+	<label for "tbLine2X1">X coordinate: </label>
+	<input type="text" id="tbLine2X1">
+	<label for "tbLine2Y1">Y coordinate: </label>
+	<input type="text" id="tbLine2Y1">
+	<br>
+	<div class="pointNum">Second point of line:</div>
+	<label for "tbLine2X2">X coordinate: </label>
+	<input type="text" id="tbLine2X2">
+	<label for "tbLine2Y2">Y coordinate: </label>
+	<input type="text" id="tbLine2Y2">
+	<div id="Line2Result">Line properties: </div>
+	<br>
+
+	<div class="header">Third line:</div>
+	<div class="pointNum">First point of line:</div>
+	<label for "tbLine3X1">X coordinate: </label>
+	<input type="text" id="tbLine3X1">
+	<label for "tbLine3Y1">Y coordinate: </label>
+	<input type="text" id="tbLine3Y1">
+	<br>
+	<div class="pointNum">Third point of line:</div>
+	<label for "tbLine3X2">X coordinate: </label>
+	<input type="text" id="tbLine3X2">
+	<label for "tbLine3Y2">Y coordinate: </label>
+	<input type="text" id="tbLine3Y2">
+	<div id="Line3Result">Line properties: </div>
+
+	<button onclick="calcLineInfo()">Lines info</button>
+	<div id="canFormTriangle"></div>
+</body>
+</html>

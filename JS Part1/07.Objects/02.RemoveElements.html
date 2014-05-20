@@ -1,0 +1,47 @@
+<!-- Write a function that removes all elements with a given value
+	var arr = [1,2,1,4,1,3,4,1,111,3,2,1,'1'];
+	arr.remove(1); //arr = [2,4,3,4,111,3,2,'1'];
+Attach it to the array type
+Read about prototype and how to attach methods -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 2 - Add prototype</title>
+	<script type="text/javascript">
+		function generateArray() {
+			var i;
+			arr = new Array(Math.floor(Math.random() * 20) + 40);
+			for (i = 0; i < arr.length; i++) {
+				arr[i] = Math.floor(Math.random() * 10);
+			}
+
+			return arr;
+		}
+
+		function remove(itemToRemove){
+			var index = Number(this.indexOf(itemToRemove))
+				count = 0;
+			while (index > -1) {
+				this.splice(index,1);
+				index = Number(this.indexOf(itemToRemove));
+				count++;
+			}
+
+			return count;
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr = generateArray(),
+			removedNumber = Math.floor(Math.random() * 10);
+
+		document.writeln('Generated array: ' + arr.join(', ') + '<br>');
+		document.writeln('Number to remove: ' + removedNumber + '<br>');
+		Array.prototype.remove = remove;
+		document.writeln('Removed ' + arr.remove(removedNumber) + ' items. New array (with items removed): ' + arr.join(', '));
+	</script>
+</body>
+</html>

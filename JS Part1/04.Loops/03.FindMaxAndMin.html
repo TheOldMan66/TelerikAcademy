@@ -1,0 +1,35 @@
+<!-- Write a script that finds the max and min number from a sequence of numbers. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 3 - Biggest and smallest number</title>
+	<script type="text/javascript">
+		function maxMin(){
+			var arr = document.getElementById("inpFirst").value.split(",");
+			var max = -Number.MAX_VALUE;
+			var min = Number.MAX_VALUE;
+			var tmp;
+			for (var i = 0; i< arr.length; i++) {
+				tmp = Number(arr[i]);
+				if (tmp > max) {
+					 max = tmp;
+				}
+
+				if (tmp < min) {
+					 min = tmp;
+				}
+			}
+			
+			result.innerHTML="Biggest number: " + max + ", smallest number: " + min;
+		}
+	</script>
+</head>
+<body>
+	<label for "inpFirst">Enter as many as you wish integer numbers, separated by comma(",")</label>
+	<input type="text" id="inpFirst">
+	<button onclick="maxMin()">Find max&min</button>
+	<div id="result"></div>
+</body>
+</html>

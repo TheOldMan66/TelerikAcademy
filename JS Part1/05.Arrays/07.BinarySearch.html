@@ -1,0 +1,56 @@
+<!-- Write a program that finds the index of given element in a sorted array of integers by using the binary search algorithm (find it in Wikipedia). -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 7 - BinarySearch</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function generateArray() {
+			var i;
+			arr = new Array(Math.floor(Math.random() * 20) + 30);
+			for (i = 0; i < arr.length; i++) {
+				arr[i] = Math.floor(Math.random() * 100);
+			}
+
+			return arr;
+		}
+
+		function binarySearch(arr, left, right, value) {
+			if (right - left < 2) {
+				if (value === arr[left]) {
+					return left;
+				} else if (value === arr[right]) {
+					return right;
+				} else {
+					return -left;
+				}
+			} else {
+				var middle = left + Math.floor((right-left)/2);
+				if (value < parseInt(arr[middle])) {
+					return binarySearch(arr, left, middle, value);
+				} else {
+					return binarySearch(arr, middle, right, value);				
+				}
+			}
+		}
+
+		var arr = generateArray();
+		document.writeln('Generated array: <br>');
+		document.writeln(arr.join(', '));
+		arr.sort(function(a,b) {
+			return a-b;
+		});
+		document.writeln('<br>Sorted array: <br>');
+		document.writeln(arr.join(', ') + '<br>');
+		var index = binarySearch(arr,0,arr.length, 50);
+		if (index < 0) {
+			document.writeln('Digit 50 is not found. It must be placed between elements ' + -(index+1) + ' (with value ' + arr[-index] + ') and ' + -index + ' (with value' + arr[-index+1] + ').');
+		} else {
+			document.writeln('Digit 50 is on index ' + index);
+		}
+	</script>
+</body>
+</html>

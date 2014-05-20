@@ -1,0 +1,45 @@
+<!-- Write a JavaScript function that finds how many times a substring is contained in a given text (perform case insensitive search).
+	Example: The target substring is "in". 
+	The text is as follows:
+		"We are living in an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days."
+	The result is: 9. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 3 - Count substring</title>
+	<script type="text/javascript">
+		function substringCount(expression, phrase) {
+			var count = 0,
+				phraseLen = phrase.length;
+
+			if (!phraseLen) {
+				return 0;
+			};
+			phrase = phrase.toUpperCase();
+			for (var i = 0, len = expression.length - phraseLen; i < len; i++) {
+				count += sentence.substr(i,phraseLen).toUpperCase() === phrase;
+			}
+
+			return count;
+		}
+	</script>
+</head>
+<body>
+	<span> Test sentence: </span>
+	<span id="sentence"></span>
+	<label for "tbInput">Enter substring to count for: </label>
+	<input type="text" id="tbInput" value="in">
+	<button onclick="doCount()">Count substring</button>
+	<div id="result"></div>
+	<script>
+		var sentence = "We are living in an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.";
+		document.getElementById('sentence').innerHTML = sentence + '<br>';
+		function doCount() {
+			var phrase = document.getElementById('tbInput').value;
+			document.getElementById('result').innerHTML = 'Substring "' + phrase + '" found ' + substringCount(sentence,phrase) + ' times in sentence';
+		}
+	</script>
+</body>
+</html>

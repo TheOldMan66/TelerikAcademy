@@ -16,8 +16,8 @@
                      "eleven", "twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
         	var decimals = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
 			var input = parseInt(document.getElementById("inpFirst").value);
+            var output = "", digit;
 
-            var output = "";
             if (input < 0 || input > 999) {
             	alert("Invalid number.");
             	return;
@@ -26,7 +26,7 @@
             if (input === 0) {
 				output = "zero";
             } else {
-            	var digit = parseInt(input / 100);
+            	digit = parseInt(input / 100);
 	            if (digit > 0)
 	            {
 	                output = output + ones[digit] + " hundred ";
