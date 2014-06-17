@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>InsertElement</title>
+	<script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+	<style type="text/css">
+		#wrapper {width:200px; height: 400px;border: 1px solid black; padding:10px;}
+		.movable {width:120px; height: 20px;border: 1px solid black; display:inline-block;}
+		#selected {background: yellow}
+	</style>
+<body>
+	<div id="wrapper">
+		<div class="movable">DIV1</div>
+		<div class="movable">DIV2</div>
+		<div class="movable">DIV3</div>
+		<div class="movable">DIV4</div>
+		<div class="movable">DIV5</div>
+	</div>
+	<input type="radio" name="position" value="Before" checked>Before</input>
+	<input type="radio" name="position" value="After">After</input>
+	<input id="text" type="text" value="Insert DIV 1" />
+	<button id = "addBtn">Add</button>
+	<script type="text/javascript" src="scripts/InsertElement.js"></script>
+</body>
+</html>

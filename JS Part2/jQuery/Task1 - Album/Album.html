@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Album homework</title>
+	<script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
+	<style type="text/css">
+		h1 {text-align: center;margin:0;}
+		#leftArrow, #rightArrow {display:inline-block; width:50px; height:100px;margin:180px 0px 250px 0px;}
+		#wrapper #container {display:inline-block; width:650px}
+		#container .albumImage{position:absolute; top:50px; left:70px; display: none}
+	</style>
+<body>
+	<div id="wrapper">
+		<div class="header" style="width:760px">
+			<h1>ALBUM</h1>
+		</div>
+		<img id = "leftArrow" src="imgs/ArrowLeft.png"/>
+		<div id="container">
+			<div id="selected" class = "albumImage">
+				<h1>One Lion</h1>
+				<img  src="imgs/lion1.jpg"/>
+			></div>
+			<div id="selected" class = "albumImage">
+				<h1>And another</h1>
+				<img  src="imgs/lion2.jpg"/>
+			></div>
+			<div id="selected" class = "albumImage">
+				<h1>And another</h1>
+				<img  src="imgs/lion3.jpg"/>
+			></div>
+			<div id="selected" class = "albumImage">
+				<h1>And another</h1>
+				<img  src="imgs/lion4.jpg"/>
+			></div>
+			<div id="selected" class = "albumImage">
+				<h1>Last one</h1>
+				<img  src="imgs/lion5.jpg"/>
+			></div>
+		</div>
+		<img id = "rightArrow" src="imgs/ArrowRight.png"/>		
+	</div>
+		<div class="header" style="width:760px">
+			<img id="slideshow" src="imgs/Slideshow_button.jpg">
+		</div>
+	<script type="text/javascript" src="scripts/album.js"></script>
+</body>
+</html>

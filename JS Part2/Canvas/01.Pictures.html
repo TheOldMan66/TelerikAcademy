@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<head>
+	<title> Pictures </title>
+</head>
+<body>
+	<canvas id="theCanvas" width="800" height="600"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("theCanvas");
+		var ctx = canvas.getContext("2d");
+	
+		function drawFilledEllipse(x, y, r, ratio) {
+			ctx.save();
+			ctx.scale(1,ratio);
+			ctx.beginPath();
+			ctx.arc(x, y / ratio, r, 0, 2 * Math.PI);
+			ctx.fill();
+			ctx.beginPath();
+			ctx.arc(x, y / ratio, r, 0, 2 * Math.PI);
+			ctx.stroke();
+			ctx.restore();
+		}
+	
+		// FACE:
+		ctx.lineWidth = 1;
+		ctx.strokeStyle = "#000";
+		ctx.fillStyle = "#9DD";
+		// draw face
+		drawFilledEllipse(40, 125, 35, .9);
+		//draw mouth
+		drawFilledEllipse(35, 140, 15, .3);
+		// draw eyes
+		drawFilledEllipse(20, 115, 7, .6);
+		drawFilledEllipse(50, 115, 7, .6);
+		ctx.fillStyle = "#000";
+		drawFilledEllipse(18, 115, 1, 2);
+		drawFilledEllipse(48, 115, 1, 2);
+		//draw nose
+		ctx.beginPath();
+		ctx.moveTo(33,115);
+		ctx.lineTo(25,130);
+		ctx.lineTo(33,130);
+		ctx.stroke();
+		ctx.fillStyle = "#469";
+		// draw hat border
+		drawFilledEllipse(40, 98, 35, 0.2);
+		// draw hat
+		drawFilledEllipse(40, 90, 20, 0.35);
+		ctx.beginPath();
+		ctx.moveTo(20,92);
+		ctx.lineTo(20,50);
+		ctx.lineTo(60,50);
+		ctx.lineTo(60,92);
+		ctx.fill();
+		ctx.beginPath();
+		ctx.moveTo(20,92);
+		ctx.lineTo(20,50);
+		ctx.lineTo(60,50);
+		ctx.lineTo(60,92);
+		ctx.stroke();
+		// draw hat top
+		drawFilledEllipse(40, 50, 20, 0.35);
+
+		// BICYCLE:
+		ctx.fillStyle = "#9DD";
+		ctx.strokeStyle = "#49A";
+		// draw wheels
+		drawFilledEllipse(50, 350, 35, 1);
+		drawFilledEllipse(180, 350, 35, 1);
+		// draw frame
+		ctx.beginPath();
+		ctx.moveTo(50,350);
+		ctx.lineTo(110,350);
+		ctx.lineTo(175,305);
+		ctx.lineTo(90,305);
+		ctx.lineTo(50,350);
+		ctx.stroke();
+		// draw steering
+		ctx.beginPath();
+		ctx.moveTo(180,350);
+		ctx.lineTo(170,280);
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.moveTo(145,290);
+		ctx.lineTo(170,280);
+		ctx.lineTo(190,260);
+		ctx.stroke();
+		// draw seat
+		ctx.beginPath();
+		ctx.moveTo(110,350);
+		ctx.lineTo(85,290);
+		ctx.stroke();
+		ctx.moveTo(70,290);
+		ctx.lineTo(100,290);
+		ctx.stroke();
+		// draw peadls
+		ctx.beginPath();
+		ctx.arc(110,350, 10, 0, 2 * Math.PI);
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.moveTo(103,343);
+		ctx.lineTo(95,335);
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.moveTo(117,357);
+		ctx.lineTo(125,365);
+		ctx.stroke();
+
+
+		// HOUSE:
+		function drawWindows (x1, y1) {
+			ctx.fillRect(x1, y1, 40, 25);
+			ctx.strokeRect(x1, y1, 40, 25);
+			ctx.fillRect(x1 + 44, y1, 40, 25);
+			ctx.strokeRect(x1 + 44, y1, 40, 25);
+			ctx.fillRect(x1, y1 + 29, 40, 25);
+			ctx.strokeRect(x1, y1 + 29, 40, 25);
+			ctx.fillRect(x1 + 44, y1 + 29, 40, 25);
+			ctx.strokeRect(x1 + 44, y1 + 29, 40, 25);
+		}
+
+		ctx.lineWidth = 2;
+		ctx.fillStyle = "#A66";
+		ctx.strokeStyle = "#000";
+		ctx.fillRect(400, 200, 240, 200);
+		ctx.strokeRect(400, 200, 240, 200);
+		ctx.beginPath();
+		ctx.moveTo(400,200);
+		ctx.lineTo(520,80);
+		ctx.lineTo(640,200);
+		ctx.closePath();
+		ctx.fill();
+		ctx.stroke();
+
+		// draw chimney
+		ctx.beginPath();
+		ctx.moveTo(575,170);
+		ctx.lineTo(575,105);
+		ctx.lineTo(595,105);
+		ctx.lineTo(595,170);
+		ctx.fill();
+		ctx.stroke();
+		drawFilledEllipse(585,105,10,0.3)
+
+		// draw door
+		ctx.beginPath();
+		ctx.moveTo(430,400);
+		ctx.lineTo(430,330);
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.moveTo(490,400);
+		ctx.lineTo(490,330);
+		ctx.stroke();
+		ctx.moveTo(430,330);
+		ctx.bezierCurveTo(430, 300, 490, 300,490, 330);
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.moveTo(460,400);
+		ctx.lineTo(460,308);
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.arc(450,370, 3, 0, 2 * Math.PI);
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.arc(470,370, 3, 0, 2 * Math.PI);
+		ctx.stroke();
+
+
+		// draw windows
+		ctx.fillStyle = "#000";
+		drawWindows(420,230);
+		drawWindows(535,230);
+		drawWindows(535,310);
+
+	</script>
+</body>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+	<input type = "text" id = "inputText" value = "proba" />
+	<input type = "button" value = "Get text context" />
+	<script type="text/javascript">
+		function logTextValue () {
+			var value = document.getElementById('inputText').value;
+			console.log(value);
+
+		}
+		
+		var button = document.querySelector("input[type=button]");
+		button.addEventListener( "click", logTextValue, true);
+	</script>
+</body>

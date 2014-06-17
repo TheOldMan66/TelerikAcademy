@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lectures List</title>
+	<script type="text/javascript" src="lib/handlebars.min.js"></script>
+	<style type="text/css">
+		table {border-collapse: collapse;}
+		table, th, td {border: 1px solid black;}
+		th {background-color:gray; color:white;}
+		tr:nth-child(2n) {background: lightgray;}
+	</style>
+<body>
+	<div id="root"></div>
+
+	<script type="text/x-handlebars-template" id="courses-template">
+    <table>
+    	<tr>
+			{{#header}}
+				<th>{{number}}</th><th>{{Title}}</th><th>{{Date1}}</th><th>{{Date2}}</th>
+			{{/header}}
+    	</tr>
+		{{#data}}
+	    	<tr>
+				<td>{{@index}}</td><td>{{Title}}</td><td>{{DoW1}} {{Time1}},{{Date1}}</td><td>{{DoW2}} {{Time2}},{{Date2}}</td>
+    		</tr>
+		{{/data}}
+    </table>
+
+    </script>
+	<script type="text/javascript">
+		var courses = {
+			header: {number: 'No', Title: 'Title', Date1:'Date #1' , Date2:'Date #2'},
+			data: [
+				{Title: 'Course Intoduction', DoW1: 'Wed', Time1 :'10:00', Date1: '28-May-2014', DoW2: 'Thu', Time2 :'14:00', Date2: '29-May-2014'},
+				{Title: 'Document Object Model', DoW1: 'Wed', Time1 :'10:00', Date1: '28-May-2014', DoW2: 'Thu', Time2 :'14:00', Date2: '29-May-2014'},
+				{Title: 'HTML5 Canvas', DoW1: 'Thu', Time1 :'18:00', Date1: '29-May-2014', DoW2: 'Fri', Time2 :'14:00', Date2: '30-May-2014'},
+				{Title: 'KinectJS Overview', DoW1: 'Thu', Time1 :'18:00', Date1: '29-May-2014', DoW2: 'Fri', Time2 :'14:00', Date2: '30-May-2014'},
+				{Title: 'SVG and RaphaelJS', DoW1: 'Wed', Time1 :'18:00', Date1: '04-Jun-2014', DoW2: 'Thu', Time2 :'14:00', Date2: '05-Jun-2014'},
+				{Title: 'Animation with Canvas and SVG', DoW1: 'Wed', Time1 :'18:00', Date1: '04-Jun-2014', DoW2: 'Thu', Time2 :'14:00', Date2: '05-Jun-2014'}
+				]
+		}
+		var source = document.getElementById('courses-template').innerHTML;
+		var template = Handlebars.compile(source);
+		var html = template(courses);
+		document.getElementById('root').innerHTML = html; 
+	</script>
+</body>
+</html>

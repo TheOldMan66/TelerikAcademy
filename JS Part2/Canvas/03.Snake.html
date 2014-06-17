@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+	<title> Pictures </title>
+</head>
+<body>
+	<canvas id="theCanvas" width="800" height="600"></canvas>
+	<script type="text/javascript">
+
+		(function snake () {
+			'use strict';
+			var snake = [],
+				boardWidth = 400,
+				boardHeight = 200,
+				direction = 39,
+				fruit = generateFruit(),
+				fedCounter = 0,
+				snakeLen = 100,
+				bigFood = false,
+				canvas = document.getElementById("theCanvas"),
+				result = document.createElement('div'),
+				ctx = canvas.getContext("2d");
+
+
+			snake.push({x:boardWidth / 2,y:boardHeight / 2,dx:0, dy:-1});
+			snake.push({x:boardWidth / 2,y:boardHeight / 2 + snakeLen, dx:0, dy:-1});
+			ctx.fillStyle = '#000';
+			drawFruit();
+			result.innerHTML = 'Snake lenght:' + snakeLen;
+			document.body.appendChild(result);
+			window.addEventListener( "keydown", doKeyDown, true);
+			requestAnimationFrame(moveSnake);
+
+
+			function validMove() {
+				for (var i = 2; i < snake.length; i++) {
+					if ((snake[0].x == snake[i].x && 
+						snake[0].y > Math.min(snake[i-1].y, snake[i].y) && 
+						snake[0].y < Math.max(snake[i-1].y, snake[i].y))  ||
+					   (snake[0].y == snake[i].y && 
+						snake[0].x > Math.min(snake[i-1].x, snake[i].x) && 
+						snake[0].x < Math.max(snake[i-1].x, snake[i].x))) {
+							return false;
+					};
+				};
+				return true;
+			}
+
+			function isInsideBorad () {
+				return snake[0].x < boardWidth && snake[0].x > 0 &&
+					   snake[0].y < boardHeight && snake[0].y > 0;
+			}
+
+			function generateFruit() {
+				bigFood = !parseInt(Math.random()*5);
+				return {x:parseInt(Math.random() * boardWidth), y:parseInt(Math.random() * boardHeight)};
+			}
+
+			function checkForFruit() {
+				return Math.abs(snake[0].x - fruit.x) < 5 && Math.abs(snake[0].y - fruit.y) < 5;
+			}
+
+			function drawFruit()
+			{
+				ctx.beginPath();
+				if (bigFood) {
+					ctx.arc(fruit.x, fruit.y, 5, 0, 2 * Math.PI);
+				} else {
+					ctx.arc(fruit.x, fruit.y, 3, 0, 2 * Math.PI);
+				}
+				ctx.fill();
+			}
+
+			function moveSnake () {
+				var lastSnakeJoint = snake[snake.length-2],
+					snakeEnd =  snake[snake.length-1];
+				
+				snake[0].x += snake[0].dx;
+				snake[0].y += snake[0].dy;
+				if(checkForFruit()) {
+					ctx.fillStyle = '#FFF';
+					ctx.strokeStyle = '#FFF';
+					drawFruit();
+					fedCounter = 10;
+					if(bigFood) {
+						snakeLen += 50;
+					} else {
+						snakeLen += 20;
+					}
+					result.innerHTML = 'Snake lenght:' + snakeLen;
+					fruit = generateFruit();
+					ctx.fillStyle = '#000';
+					ctx.strokeStyle = '#000';
+					drawFruit();
+				}
+
+					// TODO: may be snakeEnd will work - by ref???
+				if(!fedCounter) {
+					snake[snake.length-1].x += snake[snake.length-2].dx;
+					snake[snake.length-1].y += snake[snake.length-2].dy;
+				} else {
+					fedCounter--;
+				}
+				if (lastSnakeJoint.x === snakeEnd.x &&
+					lastSnakeJoint.y === snakeEnd.y) {
+					snake.pop();
+				}
+				ctx.clearRect(0, 0, boardWidth, boardHeight);			
+				ctx.strokeRect(0, 0, boardWidth, boardHeight);
+				drawFruit();
+
+				ctx.beginPath();
+				ctx.moveTo(snake[0].x,snake[0].y);
+				for (var i = 0; i < snake.length; i++) {
+					ctx.lineTo(snake[i].x, snake[i].y);
+				}
+				ctx.stroke();
+
+				if (validMove() && isInsideBorad()) {
+					requestAnimationFrame(moveSnake);
+				} else {
+					console.log('End of game. Snake lenght:' + snakeLen);					
+					result.innerHTML = 'End of game. Snake lenght:' + snakeLen;
+				}
+			}
+
+			function doKeyDown(e) {
+				direction = e.keyCode;
+				console.log(direction);
+				switch(direction) {
+					case 37 :
+						if(snake[0].dx !== 1) {
+							snake.unshift({x:snake[0].x, y:snake[0].y, dx:-1, dy:0});
+						}
+						break;
+					case 39 :
+						if(snake[0].dx !== -1) {
+							snake.unshift({x:snake[0].x, y:snake[0].y, dx:1, dy:0});
+						}
+						break;
+					case 38 :
+						if(snake[0].dy !== 1) {
+							snake.unshift({x:snake[0].x, y:snake[0].y, dx:0, dy:-1});
+						}
+						break;
+					case 40 :
+						if(snake[0].dy !== -1) {
+							snake.unshift({x:snake[0].x, y:snake[0].y, dx:0, dy:1});
+						}
+						break;
+					default:
+						console.log(e.keyIdentifier);
+						break;
+				}
+			}
+		}());
+	</script>
+</body>

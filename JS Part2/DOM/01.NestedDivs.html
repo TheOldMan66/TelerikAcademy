@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+	<div>body > div </div>
+	<div>body > div
+		<div>body > div > div</div>
+		<form>
+			<div>body > div > form > div</div>
+		</form>
+	</div>
+	<div>body > div
+		<div>body > div > div</div>
+		<ul>
+			<li>
+				<div>body > div > li > div</div>
+			</li>
+		</ul>
+		<div>body > div > div
+			<div>body > div > div > div</div>
+		</div>
+	</div>
+	<div>body > div</div>
+	<div>body > div
+		<div>body > div > div
+			<div>body > div > div > div
+				<ul>
+					<li>
+						<div>body > div > div > div > li > div
+							<div>body > div > div > div > li > div > div</div>
+						</div>
+					</li>
+				</ul>
+				<div>body > div > div > div > div</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		// with GetElementsByTagName
+		var allDivs = document.getElementsByTagName('div');
+		var divsWithTagName = [];
+		for (var i = 0, len = allDivs.length; i < len; i++) {
+			if(allDivs[i].parentElement.nodeName === 'DIV') {
+				divsWithTagName.push(allDivs[i]);
+				allDivs[i].style.background = 'yellow';
+			} else {
+				allDivs[i].style.background = 'white';				
+			}
+		}
+		var resultWithGetElement = document.createElement('p');
+		resultWithGetElement.innerHTML = "With .getElementById - " + divsWithTagName.length + ' elements found';
+		document.body.appendChild(resultWithGetElement);
+
+		// with QuerySelectorAll
+		var divsWithSelector = document.querySelectorAll("div > div");
+		var resultWithQuery = document.createElement('p');
+		resultWithQuery.innerHTML = "With .querySelectorAll - " + divsWithSelector.length + ' elements found';
+		document.body.appendChild(resultWithQuery);
+
+	</script>
+</body>

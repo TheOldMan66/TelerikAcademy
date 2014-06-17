@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+	<input type = "color" width:400px height:300px/>
+	<script type="text/javascript">
+		function changeBackground () {
+			document.body.style.background = this.value;
+		}
+		var colorPicker = document.querySelector("input[type=color]");
+		colorPicker.addEventListener( "change", changeBackground, true);
+	</script>
+</body>
