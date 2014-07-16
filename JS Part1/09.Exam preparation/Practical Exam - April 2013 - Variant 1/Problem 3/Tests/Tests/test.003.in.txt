@@ -1,2 +1,0 @@
-(def negFunc (/ 86 1))
-(* 2 negFunc  )
