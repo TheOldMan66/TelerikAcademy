@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>ComboBox Control</title>
+	<script src="scripts/libs/require.js" data-main="scripts/app"></script>
+    <style>
+        div {width:160px;border:1px solid black;text-align:center;}
+    </style>
+</head>
+<body>
+    <script id="cbTemplate" type="text/x-handlebars-template">
+        {{#each people}}
+            <div class="person-item" id="person-item-{{id}}">
+                <strong class="person-name">{{name}}</strong><p class="person-age">{{age}}</p>
+                <img src="{{avatarUrl}}" alt="{{name}}" width="100px" />
+            </div>
+        {{/each}}
+    </script>
+</body>
+</html>

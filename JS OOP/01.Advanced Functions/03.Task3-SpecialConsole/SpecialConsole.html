@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SpecialConsole</title>
+    <script src="SpecialConsole.js"></script>
+</head>
+<body>
+	<div id = 'test'>test DIV</div>
+	<p> see result on console (F12) </p>
+	<script>
+		specialConsole.writeLine("Simple message");
+		specialConsole.writeLine("{0} message", "Special");
+		specialConsole.writeError("Error: {0}", "Test error message");
+		var div = document.getElementById('test');
+		specialConsole.writeWarning("Warning: {0} => {1}", "Warning in this module", div);
+	</script>
+</body>
+</html>

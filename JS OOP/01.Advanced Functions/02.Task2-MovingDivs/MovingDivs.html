@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Moving divs </title>
+	<meta chareset = "utf-8"/>
+	<style type="text/css">
+		div{position:absolute; text-align: center;}
+	</style>
+	<script type="text/javascript" src="MovingDivs.js"/></script>
+</head>
+<body>
+	<button id="addCircular" onclick="movingShapes.add('ellipse')">Add elliptical moving div</button>
+	<button id="addRectangular" onclick="movingShapes.add('rect')">Add rectangular moving div</button>
+	<script type="text/javascript">
+		movingShapes.add('rect');
+		movingShapes.add('ellipse');
+	</script>
+</body>
+</html>

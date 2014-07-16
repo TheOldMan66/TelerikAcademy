@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>DOM Manipulator</title>
+	<script type="text/javascript" src=script.js></script>
+<head>
+</head>
+<body>
+	<div id = "wrapper"></div>
+	<script type="text/javascript">
+		function testEvent () {
+			alert ("Clicked");
+		}
+
+		var div = document.createElement('div');
+		div.innerHTML = "Clicable";
+		domModule.appendChild(div,'#wrapper');
+		var paragraph = document.createElement('p');
+		domModule.appendChild(paragraph,'div');
+
+		domModule.removeChild('#wrapper','p');
+		domModule.addHandler('#wrapper div','click',testEvent);
+		var ul = document.createElement('ul');
+		domModule.appendChild(ul,'#wrapper');
+		var li = document.createElement('li');
+		for (var i = 0; i < 105; i++) {
+			domModule.appendToBuffer('ul',li);
+		};
+//		domModule.flushBuffer();
+	</script>	
+</body>
+</html>
