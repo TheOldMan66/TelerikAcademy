@@ -1,7 +1,0 @@
-/* CSS Document */
-#headLeft {text-align:left}
-#headMiddle {text-align:center}
-#headRight {text-align:right}
-body { background-color:cyan; font-family:"Arial"; font-weight:bold; font-style:italic; line-height:2}
-header div {display:inline-block; width:33%; font-weight:normal; font-style:normal}
-section {margin-left:15px}

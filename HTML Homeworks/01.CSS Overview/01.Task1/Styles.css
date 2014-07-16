@@ -1,9 +1,0 @@
-/* CSS Document */
-
-* {color:#AAA;background-color: #666;font-family:Calibri;font-size:14px;font-weight:100;}
-h1 {font-size:1.5em;}
-td:first-child{color:#FFF;font-style:italic;vertical-align:top;width:120px;line-height:250%;}
-td span {color:#F00;}
-img {width:14px; height:14px;}
-#status {color:#F60;}
-.personalInfo ,a{color:#EE9;text-decoration: none;}
