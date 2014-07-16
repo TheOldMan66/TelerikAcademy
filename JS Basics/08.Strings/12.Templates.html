@@ -1,0 +1,71 @@
+<!-- 
+Write a function that creates a HTML UL using a template for every HTML LI. The source of the list should an array of elements. 
+Replace all placeholders marked with –{…}–   with the value of the corresponding property of the object. Example:
+	<div data-type="template" id="list-item">
+ 	<strong>-{name}-</strong> <span>-{age}-</span>
+	</div>
+
+	var people = [{name: "Peter", age: 14},…];
+	var tmpl = document.getElementById("list-item").innerHtml;
+	var peopleList = generateList(people,template);
+	//peopleList = "<ul><li><strong>Peter</strong> <span>14</span></li><li>…</li>…</ul>"
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 12 - Template</title>
+</head>
+<body>
+	<div data-type="template" id="list-item"><strong>-{firstName}-</strong> <span>-{age}-</span></div>
+	<script type="text/javascript">
+
+		function objectFormat(obj, template) {
+			var result = template;
+			for (var i in obj) {
+				while(result.indexOf('-{' + i + '}-') > -1) {
+					result = result.replace('-{' + i + '}-',obj[i]);
+				}
+			}
+			return result;
+		}
+
+		function createUL (arr,template) {
+			var element,
+				result = document.createElement('ul');
+
+			for (var i = 0; i < arr.length; i++) {
+				element = document.createElement('li');
+				element.innerHTML = objectFormat(arr[i], template);
+				result.appendChild(element);
+			}
+
+			return result;
+		}
+
+		var people = [],
+			element,
+			template = document.getElementById('list-item').innerHTML;
+
+		people.push({firstName:'Ivan', lastName:'Stoyanov', age:27});
+		people.push({firstName:'Pesho', lastName:'Grigorov', age:81});
+		people.push({firstName:'Bai', lastName:'Kolio', age:76});
+		people.push({firstName:'Stamat', lastName:'Vasilev', age:19});
+		people.push({firstName:'Lora', lastName:'Stefanova', age:76});
+		people.push({firstName:'Kerim', lastName:'Antonov', age:92});
+		people.push({firstName:'Stefan', lastName:'Georgiev', age:27});
+		people.push({firstName:'Doncho', lastName:'Minkov', age:24});
+		people.push({firstName:'Ivaylo', lastName:'Kenov', age:26});
+		people.push({firstName:'Nikolay', lastName:'Kostov', age:29});
+		people.push({firstName:'Svetlin', lastName:'Nakov', age:35});
+		document.body.appendChild(createUL(people, template));
+
+		element = document.createElement('div');
+		element.innerHTML = '<div data-type="template" id="list-item1"><strong>-{firstName}-</strong> <em>-{lastName}-</em> age: <span>-{age}-</span></div>';
+		document.body.appendChild(element);
+		template = document.getElementById('list-item1').innerHTML;
+		document.body.appendChild(createUL(people, template));
+	</script>
+</body>
+</html>

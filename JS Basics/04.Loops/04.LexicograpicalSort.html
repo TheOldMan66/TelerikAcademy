@@ -1,0 +1,37 @@
+<!-- Write a script that finds the lexicographically smallest and largest property in 
+	document, window and navigator objects. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 4 - Lexicogrphical Sort</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var first;
+		var last;
+		function getMinAndMax(obj){
+			for (first in obj) break;
+			last = first;
+			for (var prop in obj){
+				if (prop < first) {
+					first = prop;
+				}
+				if (prop > last) {
+					last = prop;
+				}
+			}
+		}
+
+		getMinAndMax(document);
+		document.writeln('In object "document" lexicographically smallest property is ' + first + ', and largest is ' + last + '<br>');
+
+		getMinAndMax(window);
+		document.writeln('In object "document" lexicographically smallest property is ' + first + ', and largest is ' + last + '<br>');
+
+		getMinAndMax(navigator);
+		document.writeln('In object "document" lexicographically smallest property is ' + first + ', and largest is ' + last + '<br>');
+	</script>
+</body>
+</html>

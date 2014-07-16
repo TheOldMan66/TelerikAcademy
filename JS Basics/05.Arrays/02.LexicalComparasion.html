@@ -1,0 +1,41 @@
+<!-- Write a script that compares two char arrays lexicographically (letter by letter).. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 2 - Comapre strings</title>
+	<script type="text/javascript">
+		function compare(){
+			var first = document.getElementById("inpFirst").value;
+			var second = document.getElementById("inpSecond").value;
+			var i;
+			for (i = 0; i < (first.length) && (i < second.length); i++) {
+				if (first[i] < second[i]) {
+					result.innerHTML = "Lexicographically first string is before second.";
+					return;
+				} else if (first[i] > second[i]) {
+					result.innerHTML = "Lexicographically second string is before first.";
+					return;
+				}
+			}
+
+			if (i < first.length) {
+				result.innerHTML = "Lexicographically second string is before first.";
+			} else if (i < second.length) {
+					result.innerHTML = "Lexicographically first string is before second.";
+			} else {
+				result.innerHTML="Two strings are equal";
+			}
+		}
+	</script>
+</head>
+<body>
+	<label for "inpFirst">Enter first string</label>
+	<input type="text" id="inpFirst">
+	<label for "inpSecond">Enter second string</label>
+	<input type="text" id="inpSecond">
+	<button onclick="compare()">Compare</button>
+	<div id="result"></div>
+</body>
+</html>

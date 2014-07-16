@@ -1,0 +1,58 @@
+<!-- 
+	Write a program that extracts from a given text all palindromes, e.g. "ABBA", "lamal", "exe".
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 10 - Plaindromes</title>
+	<script type="text/javascript">
+
+		function isPalindrome(word) {
+			var start = 0,
+				end = word.length - 1;
+
+			while (parseInt(end) > parseInt(start)) {
+				if (word[start] !== word[end]) {
+					return false;
+				}
+				start++;
+				end --;
+
+			}
+
+			return true;
+		}
+
+
+		function palindromes(input){
+			var words = input.split(' ');
+			result = [];
+
+			for (var i = 0, len = words.length; i < len; i++) {
+				if (isPalindrome(words[i])) {
+					result.push(words[i]);
+				}
+			}
+
+			return result;
+		}
+	</script>
+</head>
+<body>
+	<label for "tbInput">Enter sentence: </label>
+	<input type="text" style="width:600px" id="tbInput">
+	<button onclick="findPalindromes()">Find palindromes</button>
+	<div id="result"></div>
+	<script type="text/javascript">
+		var input = 'sentence ability civic palindrome deified actually radar there racecar everyday level basis';
+
+		document.getElementById('tbInput').value = input;
+		function findPalindromes() {
+			input = document.getElementById('tbInput').value;
+			document.getElementById('result').innerHTML = 'Palindromes found: ' + palindromes(input);
+		}
+	</script>
+</body>
+</html>

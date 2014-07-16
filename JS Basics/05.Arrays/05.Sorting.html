@@ -1,0 +1,51 @@
+<!-- Sorting an array means to arrange its elements in increasing order. Write a script to sort an array. 
+	Use the "selection sort" algorithm: Find the smallest element, move it at the first position, find the
+	smallest from the rest, move it at the second position, etc.Hint: Use a second array. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 5 - Array sorting</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function generateArray() {
+			var i;
+			arr = new Array(Math.floor(Math.random() * 20) + 30);
+			for (i = 0; i < arr.length; i++) {
+				arr[i] = Math.floor(Math.random() * 100);
+			}
+
+			return arr;
+		}
+
+		function mySort() {
+			var i, maxSoFar, idx;
+			for (i = arr.length; i > 0; i--)
+			{
+				maxSoFar = arr[i];
+				idx = null;
+				j = i - 1;
+				for (j = i - 1; j >= 0; j--) {
+					if (parseInt(maxSoFar) < parseInt(arr[j])){
+						maxSoFar = arr[j];
+						idx = j;
+					}
+				}
+				if (idx !== null) {
+//					console.log(arr.join(", ") + " ->" + " i = " + i + " idx = " + idx + " maxSoFar = " + maxSoFar);
+					arr.splice(idx, 1, arr.splice(i,1,arr[idx]));
+				};
+			}
+		}
+
+		var arr = generateArray();
+		document.writeln("Unsorted array: <br>")
+		document.writeln(arr.join(", ") + "<br>");
+		mySort();
+		document.writeln("Sorted array: <br>")
+		document.writeln(arr.join(", "));
+	</script>
+</body>
+</html>

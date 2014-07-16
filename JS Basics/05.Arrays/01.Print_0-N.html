@@ -1,0 +1,20 @@
+<!-- Write a script that allocates array of 20 integers and initializes each element by its index multiplied by 5. Print the obtained array on the console.. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 1 - Array of 20 int's</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr = new Array(20);
+		var i;
+		for (i = 0; i <= 20; i++) {
+			arr[i] = i * 5;
+		}
+
+		document.writeln(arr.join(", "));
+	</script>
+</body>
+</html>

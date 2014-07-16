@@ -1,0 +1,51 @@
+<!-- Write a function that returns the index of the first element in array that is bigger than its neighbors, or -1, if there’s no such element.
+	Use the function from the previous exercise.. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 6 - Bigger than neighbors</title>
+	<script type="text/javascript">
+		function generateArray() {
+			var i,
+				arr = new Array(Math.floor(Math.random() * 20) + 40);
+
+			for (i = 0, len = arr.length; i < len; i++) {
+				arr[i] = Math.floor(Math.random() * 10);
+			}
+
+			return arr;
+		}
+
+		function isBigger(arr, pos){
+			return (parseInt(arr[pos]) > parseInt(arr[pos-1])) && (parseInt(arr[pos]) > parseInt(arr[pos+1]));
+		}
+
+		function checkNeighbors(arr){
+			for (var i = 1, len = arr.length - 1; i < len; i++) {
+				if(isBigger(arr,i)){
+					return i;
+				}
+			}
+
+			return -1;
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr = generateArray(),
+			arrSpan = document.getElementById("arrSpan"),
+			result = document.getElementById("result"),
+			pos = checkNeighbors(arr);
+		
+		document.writeln('Generated array: ' + arr.join(', ') + '<br>');
+		if (parseInt(pos) > -1) {
+			document.writeln('First meeting the criterias element is on position ' + pos + ' (value ' + arr[pos] +').'); 
+		} else {
+			document.writeln('No elemet meeting criterias');
+		}
+	</script>
+</body>
+</html>

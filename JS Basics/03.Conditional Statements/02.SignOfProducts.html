@@ -1,0 +1,60 @@
+<!-- Write a script that shows the sign (+ or -) of the product of three real numbers without calculating it.
+	Use a sequence of if statements. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task 2 - Sign of product</title>
+	<script type="text/javascript">
+		function findSign(){
+			var firstIsNegative = parseInt(document.getElementById("inpFirst").value) < 0;
+			var secondIsNegative = parseInt(document.getElementById("inpSecond").value) < 0;
+			var thirdIsNegative = parseInt(document.getElementById("inpThird").value) < 0;
+			var result = document.getElementById("result");
+			if (firstIsNegative) {
+				if (secondIsNegative) {
+					if (thirdIsNegative) {
+						result.innerHTML = "Product is negative";
+					} else {
+						result.innerHTML = "Product is positive";
+					}
+				} else {
+					if (thirdIsNegative) {
+						result.innerHTML = "Product is positive";
+					} else {
+						result.innerHTML = "Product is negative";
+					}
+				}
+			} else {
+				if (secondIsNegative) {
+					if (thirdIsNegative) {
+						result.innerHTML = "Product is positive";
+					} else {
+						result.innerHTML = "Product is negative";
+					}					
+				} else {
+					if (thirdIsNegative) {
+						result.innerHTML = "Product is negative";
+					} else {
+						result.innerHTML = "Product is positive";
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<label for "inpFirst">Enter first integer: </label>
+	<input type="text" id="inpFirst">
+	<br/>
+	<label for "inpSecond">Enter second integer: </label>
+	<input type="text" id="inpSecond">
+	<br/>
+	<label for "inpThird">Enter third integer: </label>
+	<input type="text" id="inpThird">
+	<br/>
+	<button onclick="findSign()">Find sign of product</button>
+	<div id="result"></div> 
+</body>
+</html>
