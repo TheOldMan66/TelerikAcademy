@@ -1,0 +1,128 @@
+/* Resolution-width: 960px
+font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif
+font-size: 16px
+font-family for dates: Consolas */
+body, div, h1, ul, li, span, p, input, button{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	width: 960px;
+}
+
+#wrapper{
+	margin: 25px;
+	padding: 15px;
+	padding-bottom: 5px;
+	font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+	font-size: 16px;
+	color: #555555;
+	border: 1px solid black;
+	border-radius: 15px;
+	float: left;
+	background: #eeeeee;
+	background: -moz-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #aaaaaa));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+	background: -o-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+	background: -ms-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+	background: linear-gradient(to bottom, #eeeeee 0%, #aaaaaa 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#aaaaaa', GradientType=0);
+}
+
+#wrapper, button{
+	background: #eeeeee;
+	background: -moz-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #aaaaaa));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+	background: -o-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+	background: -ms-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+	background: linear-gradient(to bottom, #eeeeee 0%, #aaaaaa 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#aaaaaa', GradientType=0);
+}
+
+h1{
+	font-size: 1.75em;
+	padding: 0px 10px;
+}
+
+li{
+	list-style-type: none;
+	border: 1px solid black;
+	border-radius: 15px;
+	width: 200px;
+	padding: 5px 10px;
+	margin: 5px 0px;
+}
+
+.me-item{
+	margin-left: auto;
+	margin-right: 0px
+	background: #29EDFF;
+	background: -moz-linear-gradient(top, #29EDFF 0%, #C0FAFF 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #29EDFF), color-stop(100%, #C0FAFF));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #29EDFF 0%, #C0FAFF 100%);
+	background: -o-linear-gradient(top, #29EDFF 0%, #C0FAFF 100%);
+	background: -ms-linear-gradient(top, #29EDFF 0%, #C0FAFF 100%);
+	background: linear-gradient(to bottom, #29EDFF 0%, #C0FAFF 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#29EDFF', endColorstr='#C0FAFF', GradientType=0);
+
+}
+
+.toshko-item{
+	background: #DFFFD2;
+	background: -moz-linear-gradient(top, #DFFFD2 0%, #6FFF3B 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #DFFFD2), color-stop(100%, #6FFF3B));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #DFFFD2 0%, #6FFF3B 100%);
+	background: -o-linear-gradient(top, #DFFFD2 0%, #6FFF3B 100%);
+	background: -ms-linear-gradient(top, #DFFFD2 0%, #6FFF3B 100%);
+	background: linear-gradient(to bottom, #DFFFD2 0%, #6FFF3B 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DFFFD2', endColorstr='#6FFF3B', GradientType=0)
+}
+
+.date{
+	font-family: Consolas;
+	font-size: 0.8em;
+	text-align: right;
+	display: block;
+	font-weight: normal;
+}
+
+span{
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.toshko-item span{
+	display: block;
+	text-align: right;
+}
+
+.toshko-item .date{
+	text-align: left;
+}
+
+input{
+	width:75%;
+	height: 35px;
+	border-radius: 5px;
+	border: none;
+	background-color: #EEEEEE;
+}
+
+button{
+	height: 30px;
+	font-size: 1.2em;
+	border-radius: 5px;
+	padding: 0px 15px;
+	border: none;
+}

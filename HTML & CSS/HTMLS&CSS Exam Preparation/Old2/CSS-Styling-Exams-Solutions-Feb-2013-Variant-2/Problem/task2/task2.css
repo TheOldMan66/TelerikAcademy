@@ -1,0 +1,72 @@
+﻿body, div, ul, li, a, span, img{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+#wrapper{
+	width: 960px;
+	color: #777777;
+	font-family: 'Courier New', Courier, 'Nimbus Mono L', monospace;
+	font-size: 16px;
+	padding: 25px;
+}
+
+img{
+	width: 15px;
+}
+
+li{
+	list-style-type: none;
+}
+
+a{
+	text-decoration: none; 
+}
+
+.notification-list > li{
+	color: #777777;
+	font-size: 1.25em;
+}
+
+.notification-list{
+	width: 470px;
+	display: inline-block;
+	border: 1px solid black;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	background: #AAAAAA; /* Old browsers */
+	background: -moz-linear-gradient(top,  #AAAAAA 0, #DDDDDD 24px); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#AAAAAA), color-stop(14px,#dddddd), color-stop(24px,#DDDDDD)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #AAAAAA 0%,#dddddd 14px,#DDDDDD 24px); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #AAAAAA 0%,#dddddd 14px,#DDDDDD 24px); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #AAAAAA 0%,#dddddd 14px,#DDDDDD 24px); /* IE10+ */
+	background: linear-gradient(to bottom,  #AAAAAA 0%,#dddddd 14px,#DDDDDD 24px); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#AAAAAA', endColorstr='#DDDDDD',GradientType=0 ); /* IE6-9 */
+}
+
+.notification-list > li{
+	display: inline-block;
+	padding: 3px 10px;
+	border-right: 1px solid black;
+}
+
+.notification-list > li:last-of-type{
+	border-right: none;
+}
+
+.content{
+	background: #DDDDDD;
+	display: none;
+	margin: 15px;
+	width: 470px;
+	font-size: 0.8em;
+}
+
+.notification-list > li:hover .content{
+	display: block;
+	position: absolute;
+//	top:54px;
+	margin-top: 5px;
+	left: 25px;
+}
