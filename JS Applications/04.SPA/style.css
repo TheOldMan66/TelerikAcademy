@@ -1,0 +1,23 @@
+#wrapper {
+    width: 800px;
+    overflow:auto;
+    border: 1px solid black;
+}
+
+#wrapper ul {
+    padding: 0;
+    margin: 15px;
+}
+
+#wrapper li{
+    list-style-type: none;
+    overflow-wrap: break-word;
+}
+
+#wrapper li .by{
+    color: blue;
+}
+
+#wrapper li .msg{
+    color: red;
+}

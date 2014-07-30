@@ -1,0 +1,59 @@
+html, body {
+	margin: 0;
+	padding: 0;	
+}
+
+body {
+	background-color: #F7F7F8;
+}
+
+.main-content {
+	margin-left: 5%;
+	margin-top: 60px;
+	width: 93%;
+}
+
+.main-content h2 {
+	color: #EEA104;
+}
+
+.main-content .chat-area {
+	margin-bottom : 10px;
+	width: 100%;
+	background-color: #F7F7F8;	
+}
+
+.main-content .chat-area .messageBox {
+	border-radius: 5px;
+	margin-right: 1%;
+}
+
+.main-content .nickname-containter .nickNameBox {
+	margin-left : 1%;
+	margin-right: 1%;
+}
+
+.main-content .feed-container {
+	overflow-y: scroll;
+	height: 550px;
+	width: 100%;
+	background-color: #F7F7F8;
+	border : 1px solid black;
+	border-radius: 10px;
+	padding : 10px;
+}
+
+.main-content .feed-container .messages-list {
+	list-style-type: none;
+	width: 95%;
+	padding: 0;
+}
+
+.main-content .feed-container .messages-list p {
+	width: 95%;
+	word-wrap: break-word;
+}
+
+.main-content .feed-container .sender{
+	color : #EEA104;
+}

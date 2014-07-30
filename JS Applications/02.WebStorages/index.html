@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sheeps and rams game</title>
+	<style type="text/css">
+		body {font-size:20px}
+		#userData, #gameBoard, #congrats {display:none}
+		#congrats {color:red; font-size:30px;}
+	</style>
+	<script type="text/javascript" src="libs/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<h1>Sheeps and rams game</h1>
+	<p>Explanation of game rules - todo in future. I'll do - sometimes... :) </p>
+	<button id="highScoreBtn">HighScores</button>
+	<div id="highScoreDiv"></div>
+	<div id="userLogin">
+		<span>Please enter your name</span>
+		<input type="text" id="userNameInput"></input>
+		<button id="userLoginBtn">Login</button>
+	</div>
+	<div id="userData">
+		<span>Welcome </span>
+		<span id="userNameSpan"></span>
+		<span>. Your best score for now is</span>
+		<span id="userBestScore"> unknown </span>
+		<span> attempts.</span>
+	</div>
+	<div id="gameBoard">
+		<input id="userGuessNumber" type=text></input>
+		<button id="userInputBtn">Check</button>
+		<div id="sheepContainer"></div>
+	</div>
+	<div id="congrats">Congratulations! You guess the number!!!</div>
+	<script type="text/javascript" src="SheepsAndRams.js"></script>
+</body>
+</html>

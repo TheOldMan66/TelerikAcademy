@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Crowd chat</title>
+	<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha1.js"></script>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="styles/styles.css" rel="stylesheet" />
+    <link href="styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="styles/kendo.moonlight.min.css" rel="stylesheet" />
+    <link href="styles/bootstrap.css" rel="stylesheet">
+	<script src="scripts/libs/require.js" data-main="scripts/app"></script>
+</head>
+<body>	
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#/">Crowd chat</a>
+	    </div>
+	    <div class="collapse navbar-collapse">
+	      <ul class="nav navbar-nav">
+	      	<li id="homeLink"><a href="#/">Home</a></li>
+	        <li id="registerLink"><a href="#/register">Register</a></li>
+	        <li id="LoginLink"><a href="#/login">Login</a></li>
+	        <li id="LogoutLink"><a href="#/logout">Logout</a></li>
+	        <li id="ChatLink"><a href="#/chat">Chat</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>	
+	<div id="main-content" class="main-content">
+	</div>
+	<script id="chat-template" type="text/x-handlebars-template">
+        <ul class = "messages-list">      
+            {{#each message}}  
+	            <li><span class="sender">{{by}}</span>: <p>{{text}}</p> </li>
+            {{/each}}           
+        </select>
+    </script>
+</body>
+</html>
