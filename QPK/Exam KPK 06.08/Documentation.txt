@@ -1,0 +1,41 @@
+Design pattern: Simple Factory
+Hard disk Factory
+
+Design pattern: Strategy
+Everywhere :)
+
+Design pattern: Template Method
+	* 
+
+Design pattern: Abstract factory
+In Main method is implemented some sort of abstract factory - computers are builded independet of brand
+
+Design pattern: Composite
+	* 
+
+Design pattern: Mediator
+	* 
+
+Found bottlenecks:
+1. square number изчислява квадрата на стойността със събиране в цикъл вместо с умножение или със Sqr.
+2. Random number generator в Play метода генерира безмислено големи числа
+
+Found bugs:
+1. CPU не запазва videocard и гърми при опит за печат на Process метода.
+	* 
+	* 
+
+Single responsibility principle
+CPU no mre printing on screen ... and other
+
+Open/closed principle
+All part work with interfaces only.
+
+Liskov substitution principle
+Hard disk and CPU are replaceable each other
+
+Interface segregation principle
+	* 
+
+Dependency inversion principle
+See above - all components depends only on interfaces.

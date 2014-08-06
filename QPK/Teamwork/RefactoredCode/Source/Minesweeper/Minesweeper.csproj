@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD7F99C0-B977-4F24-83A8-DC8ED5D31B0A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Minesweeper</RootNamespace>
+    <AssemblyName>Minesweeper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CellCreator.cs" />
+    <Compile Include="Common\CellFactory.cs" />
+    <Compile Include="Common\RandomGenerator.cs" />
+    <Compile Include="Engine\Command.cs" />
+    <Compile Include="Engine\CommandType.cs" />
+    <Compile Include="Engine\CommandParser.cs" />
+    <Compile Include="Engine\GameBoardMemory.cs" />
+    <Compile Include="Engine\GameEngine.cs" />
+    <Compile Include="Engine\Memento.cs" />
+    <Compile Include="GameObjects\Cell.cs" />
+    <Compile Include="GameObjects\CellTypes.cs" />
+    <Compile Include="GameObjects\FlagVisitor.cs" />
+    <Compile Include="GameObjects\MineCell.cs" />
+    <Compile Include="GameObjects\NeighbouringMinesVisitor.cs" />
+    <Compile Include="GameObjects\Position.cs" />
+    <Compile Include="GameObjects\SafeCell.cs" />
+    <Compile Include="GameObjects\CellRevealingVisitor.cs" />
+    <Compile Include="GUI\ConsoleInterface.cs" />
+    <Compile Include="GUI\ConsoleSkins\AllWhiteSkin.cs" />
+    <Compile Include="GUI\ConsoleSkins\BrightSkin.cs" />
+    <Compile Include="GUI\KeyboardInput.cs" />
+    <Compile Include="GUI\SpeechInput.cs" />
+    <Compile Include="Interfaces\IConsoleSkin.cs" />
+    <Compile Include="Interfaces\IGameBoard.cs" />
+    <Compile Include="Interfaces\IGameObject.cs" />
+    <Compile Include="Interfaces\IInputDevice.cs" />
+    <Compile Include="Interfaces\IOInterface.cs" />
+    <Compile Include="Interfaces\IPlayer.cs" />
+    <Compile Include="Interfaces\IScoreBoard.cs" />
+    <Compile Include="Interfaces\IVisitable.cs" />
+    <Compile Include="Interfaces\IVisitor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GUI\GameBoard.cs" />
+    <Compile Include="Engine\CommandProcessor.cs" />
+    <Compile Include="Minesweeper.cs" />
+    <Compile Include="GUI\ScoreBoard.cs" />
+    <Compile Include="Player.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
