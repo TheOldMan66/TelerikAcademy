@@ -1,0 +1,3 @@
+Git repository of procejt is https://github.com/Mitko-Kerezov/Team-Battle-Dwarf
+
+Entire prject is almost 200 MB in size, and cannot be attached in Telerik student system.

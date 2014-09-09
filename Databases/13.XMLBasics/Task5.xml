@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<students xmlns:students="urn:students">
+  <student>
+    <name>Pesho Georgiev</name>
+    <sex>Male</sex>
+    <birthDate>01.01.2001</birthDate>
+    <phone>+359(12)345-67-89</phone>
+    <e-mail>pesho@abv.bg</e-mail>
+    <course>Databases</course>
+    <speciality>Web developer</speciality>
+    <facultyNumber>0000000001</facultyNumber>
+    <exam>
+      <name>C# part 1</name>
+      <tutor>Doncho</tutor>
+      <score>25</score>
+    </exam>
+    <exam>
+      <name>C# part 2</name>
+      <tutor>Ivaylo</tutor>
+      <score>35</score>
+    </exam>
+    <exam>
+      <name>HTML</name>
+      <tutor>Niki</tutor>
+      <score>45</score>
+    </exam>
+    <exam>
+      <name>JS Basics</name>
+      <tutor>Evlogi</tutor>
+      <score>15</score>
+    </exam>
+  
+</student>
+  <student>
+    <name>Maryika Ivanova</name>
+    <sex>Female</sex>
+    <birthDate>30.02.2003</birthDate>
+    <phone>+359(24)987-65-43</phone>
+    <e-mail>mimeto@abv.bg</e-mail>
+    <course>HQPK</course>
+    <speciality>C# Developer</speciality>
+    <facultyNumber>0000000002</facultyNumber>
+    <exam>
+      <name>HTML</name>
+      <tutor>Doncho</tutor>
+      <score>55</score>
+    </exam>
+    <exam>
+      <name>HQPC</name>
+      <tutor>Ivaylo</tutor>
+      <score>65</score>
+    </exam>
+    <exam>
+      <name>JS Basics</name>
+      <tutor>Niki</tutor>
+      <score>75</score>
+    </exam>
+  </student>
+</students>

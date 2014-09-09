@@ -1,0 +1,346 @@
+<catalogue>
+  <album>
+    <name>Live At River Plate</name>
+    <artist>AC/DC</artist>
+    <year>2011</year>
+    <producer>Columbia Records</producer>
+    <price>12,99</price>
+    <song>
+      <title>Intro</title>
+      <duration>1:04</duration>
+    </song>
+    <song>
+      <title> Rock 'N' Roll Train</title>
+      <duration>04:21</duration>
+    </song>
+    <song>
+      <title>Hell Ain't A Bad Place To Be</title>
+      <duration>4:07</duration>
+    </song>
+    <song>
+      <title>Back In Black</title>
+      <duration>4:01</duration>
+    </song>
+    <song>
+      <title>Big Jack</title>
+      <duration>3:53</duration>
+    </song>
+    <song>
+      <title>Dirty Deeds Done Dirt Cheap</title>
+      <duration>4:36</duration>
+    </song>
+    <song>
+      <title>Shot Down In Flames</title>
+      <duration>3:21</duration>
+    </song>
+    <song>
+      <title>Thunderstruck</title>
+      <duration>5:27</duration>
+    </song>
+    <song>
+      <title>Black Ice</title>
+      <duration>3:24</duration>
+    </song>
+    <song>
+      <title>The Jack</title>
+      <duration>10:36</duration>
+    </song>
+    <song>
+      <title>Hells Bells</title>
+      <duration>5:27</duration>
+    </song>
+    <song>
+      <title>Shoot To Thrill</title>
+      <duration>5:43</duration>
+    </song>
+    <song>
+      <title>War Machine </title>
+      <duration>3:13</duration>
+    </song>
+    <song>
+      <title>Dog Eat Dog</title>
+      <duration>4:28</duration>
+    </song>
+    <song>
+      <title>T,N,T,</title>
+      <duration>3:47</duration>
+    </song>
+  </album>
+  
+  <album>
+    <name>World Painted Blood </name>
+    <artist>Slayer</artist>
+    <year>2009</year>
+    <producer>Sony Music</producer>
+    <price>9,99</price>
+    <song>
+      <title>World Painted Blood</title>
+      <duration>05:53</duration>
+    </song>
+    <song>
+      <title>Unit 731</title>
+      <duration>02:40</duration>
+    </song>
+    <song>
+      <title>Snuff</title>
+      <duration>03:42</duration>
+    </song>
+    <song>
+      <title>Beauty Through Order</title>
+      <duration>04:37</duration>
+    </song>
+    <song>
+      <title>Hate Worldwide</title>
+      <duration>02:52</duration>
+    </song>
+    <song>
+      <title>Public Display Of Dismemberment</title>
+      <duration>02:35</duration>
+    </song>
+    <song>
+      <title>Human Strain</title>
+      <duration>03:09</duration>
+    </song>
+    <song>
+      <title>Americon</title>
+      <duration>03:23</duration>
+    </song>
+    <song>
+      <title>Psychopathy Red</title>
+      <duration>02:26</duration>
+    </song>
+    <song>
+      <title>Playing With Dolls </title>
+      <duration>04:14</duration>
+    </song>
+    <song>
+      <title>Not Of This God</title>
+      <duration>04:20</duration>
+    </song>
+  </album>
+  <album>
+    <name>Live At River Plate</name>
+    <artist>AC/DC</artist>
+    <year>2011</year>
+    <producer>Columbia Records</producer>
+    <price>12,99</price>
+    <song>
+      <title>Intro</title>
+      <duration>1:04</duration>
+    </song>
+    <song>
+      <title> Rock 'N' Roll Train</title>
+      <duration>04:21</duration>
+    </song>
+    <song>
+      <title>Hell Ain't A Bad Place To Be</title>
+      <duration>4:07</duration>
+    </song>
+    <song>
+      <title>Back In Black</title>
+      <duration>4:01</duration>
+    </song>
+    <song>
+      <title>Big Jack</title>
+      <duration>3:53</duration>
+    </song>
+    <song>
+      <title>Dirty Deeds Done Dirt Cheap</title>
+      <duration>4:36</duration>
+    </song>
+    <song>
+      <title>Shot Down In Flames</title>
+      <duration>3:21</duration>
+    </song>
+    <song>
+      <title>Thunderstruck</title>
+      <duration>5:27</duration>
+    </song>
+    <song>
+      <title>Black Ice</title>
+      <duration>3:24</duration>
+    </song>
+    <song>
+      <title>The Jack</title>
+      <duration>10:36</duration>
+    </song>
+    <song>
+      <title>Hells Bells</title>
+      <duration>5:27</duration>
+    </song>
+    <song>
+      <title>Shoot To Thrill</title>
+      <duration>5:43</duration>
+    </song>
+    <song>
+      <title>War Machine </title>
+      <duration>3:13</duration>
+    </song>
+    <song>
+      <title>Dog Eat Dog</title>
+      <duration>4:28</duration>
+    </song>
+    <song>
+      <title>T,N,T,</title>
+      <duration>3:47</duration>
+    </song>
+  </album>
+  
+  <album>
+    <name>World Painted Blood </name>
+    <artist>Slayer</artist>
+    <year>2009</year>
+    <producer>Sony Music</producer>
+    <price>9,99</price>
+    <song>
+      <title>World Painted Blood</title>
+      <duration>05:53</duration>
+    </song>
+    <song>
+      <title>Unit 731</title>
+      <duration>02:40</duration>
+    </song>
+    <song>
+      <title>Snuff</title>
+      <duration>03:42</duration>
+    </song>
+    <song>
+      <title>Beauty Through Order</title>
+      <duration>04:37</duration>
+    </song>
+    <song>
+      <title>Hate Worldwide</title>
+      <duration>02:52</duration>
+    </song>
+    <song>
+      <title>Public Display Of Dismemberment</title>
+      <duration>02:35</duration>
+    </song>
+    <song>
+      <title>Human Strain</title>
+      <duration>03:09</duration>
+    </song>
+    <song>
+      <title>Americon</title>
+      <duration>03:23</duration>
+    </song>
+    <song>
+      <title>Psychopathy Red</title>
+      <duration>02:26</duration>
+    </song>
+    <song>
+      <title>Playing With Dolls </title>
+      <duration>04:14</duration>
+    </song>
+    <song>
+      <title>Not Of This God</title>
+      <duration>04:20</duration>
+    </song>
+  </album>
+  <album>
+    <name>Master Of Puppets</name>
+    <artist>Metallica</artist>
+    <year>1986</year>
+    <producer>Elektra/Asylum</producer>
+    <price>9,99</price>
+    <song>
+      <title>Battery </title>
+      <duration>5:10</duration>
+    </song>
+    <song>
+      <title>Master of Puppets </title>
+      <duration>8:38</duration>
+    </song>
+    <song>
+      <title>The Thing That Should Not Be </title>
+      <duration>6:32</duration>
+    </song>
+    <song>
+      <title>Welcome Home (Sanitarium) </title>
+      <duration>6:28</duration>
+    </song>
+    <song>
+      <title>Dispossible Heroes </title>
+      <duration>8:14</duration>
+    </song>
+    <song>
+      <title>Leper Messiah </title>
+      <duration>5:38</duration>
+    </song>
+    <song>
+      <title>Orion </title>
+      <duration>8:12</duration>
+    </song>
+    <song>
+      <title>Damage Inc </title>
+      <duration>5:08</duration>
+    </song>
+  </album>
+  <album>
+    <name>Black Ice</name>
+    <artist>AC/DC</artist>
+    <year>2008</year>
+    <producer>Columbia Records</producer>
+    <price>11,99</price>
+    <song>
+      <title>Rock 'n Roll Train</title>
+      <duration>4:21</duration>
+    </song>
+    <song>
+      <title>Skies on Fire</title>
+      <duration>3:34</duration>
+    </song>
+    <song>
+      <title>Big Jack</title>
+      <duration>3:56</duration>
+    </song>
+    <song>
+      <title>Anything Goes</title>
+      <duration>3:22</duration>
+    </song>
+    <song>
+      <title>War Machine</title>
+      <duration>3:09</duration>
+    </song>
+    <song>
+      <title>Smash 'n' Grab</title>
+      <duration>4:06</duration>
+    </song>
+    <song>
+      <title>Spoilin' for a Fight</title>
+      <duration>3:16</duration>
+    </song>
+    <song>
+      <title>Wheels</title>
+      <duration>3:28</duration>
+    </song>
+    <song>
+      <title>Decibel</title>
+      <duration>3:33</duration>
+    </song>
+    <song>
+      <title>Stormy May Day</title>
+      <duration>3:10</duration>
+    </song>
+    <song>
+      <title>She Likes Rock 'n Roll</title>
+      <duration>3:52</duration>
+    </song>
+    <song>
+      <title>Money Made</title>
+      <duration>4:15</duration>
+    </song>
+    <song>
+      <title>Rock 'n' Roll Dream</title>
+      <duration>4:40</duration>
+    </song>
+    <song>
+      <title>Rocking All the Way</title>
+      <duration>3:22</duration>
+    </song>
+    <song>
+      <title>Black Ice</title>
+      <duration>3:24</duration>
+    </song>
+  </album>
+</catalogue>

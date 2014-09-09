@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<path name="C:\Users\julian\Google Диск\Databases\14.XMLParsers\XMLParsers">
+  <file name="XMLParsers.sln" />
+  <file name="XMLParsers.v12.suo" />
+  <dir name="03.CountArtists XPath" />
+  <dir name="04.DeleteExpensiveAlbums" />
+  <dir name="05.SongsTitles" />
+  <dir name="06.SongsTitlesXPath" />
+  <dir name="07.CreateXMLFromFile" />
+  <dir name="08.XMLReader-XMLWriter" />
+  <dir name="09.FilesAndFolders" />
+  <dir name="XMLParsers" />
+</path>

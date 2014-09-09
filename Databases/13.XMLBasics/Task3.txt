@@ -1,0 +1,1 @@
+XML name spaces is some sort of ... country, city, ot mobile carriers prefixes in phone numbers. This allow us to have same phone number more that once, and in same time these numbers wil be used from different peoples.

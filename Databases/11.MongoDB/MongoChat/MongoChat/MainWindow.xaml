@@ -1,0 +1,15 @@
+﻿<Window x:Class="MongoChat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="400" Width="600">
+    <Grid>
+        <ListBox Name="listboxMainChat" HorizontalAlignment="Left" Height="260" Margin="10,10,0,0" VerticalAlignment="Top" Width="572"/>
+        <Button Name="buttonSendMessage" Content="Send" HorizontalAlignment="Left" Margin="507,275,0,0" VerticalAlignment="Top" Width="75" Click="buttonSendMessage_Click"/>
+        <TextBox Name="textboxMessage" HorizontalAlignment="Left" Height="22" Margin="10,275,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="492"/>
+        <Button Name="buttonLogout" Content="Logout" HorizontalAlignment="Left" Margin="507,315,0,0" VerticalAlignment="Top" Width="75" Click="buttonLogout_Click"/>
+        <TextBlock Name="textblockUserName" TextAlignment="Right" HorizontalAlignment="Left" Margin="310,318,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="192"/>
+        <Button Name="btnPostsFromThisSession" Content="Posts from current session" HorizontalAlignment="Left" Margin="10,315,0,0" VerticalAlignment="Top" Width="180" Click="btnPostsFromThisSession_Click"/>
+        <Button Name="btnAllPosts" Content="All posts" HorizontalAlignment="Left" Margin="195,315,0,0" VerticalAlignment="Top" Width="75" Click="btnAllPosts_Click"/>
+
+    </Grid>
+</Window>

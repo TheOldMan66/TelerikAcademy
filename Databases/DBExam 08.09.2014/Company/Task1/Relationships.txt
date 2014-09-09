@@ -1,0 +1,4 @@
+Employee <-> Department - one to many
+Employee <-> Manager - one to many
+Employee <-> Projects - many to many with additional table (and additional data for dates on it)
+Employee <-> reports - one to many.

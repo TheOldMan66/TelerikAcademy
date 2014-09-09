@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MongoChat.Data" GeneratedClassName="MongoChat">
+  <Profiles />
+  <Settings>
+    <Setting Name="MongoConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mongodb://user:alabala123@ds063879.mongolab.com:63879/mongochat</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

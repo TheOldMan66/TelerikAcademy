@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<albums>
+  <album>
+    <name>Live At River Plate</name>
+    <artist>AC/DC</artist>
+  </album>
+  <album>
+    <name>World Painted Blood </name>
+    <artist>Slayer</artist>
+  </album>
+  <album>
+    <name>Live At River Plate</name>
+    <artist>AC/DC</artist>
+  </album>
+  <album>
+    <name>World Painted Blood </name>
+    <artist>Slayer</artist>
+  </album>
+  <album>
+    <name>Master Of Puppets</name>
+    <artist>Metallica</artist>
+  </album>
+  <album>
+    <name>Black Ice</name>
+    <artist>AC/DC</artist>
+  </album>
+</albums>

@@ -1,0 +1,64 @@
+1. What database models do you know?
+ - hierarchical, graph, relational, Object-oriented.
+ 
+2. Which are the main functions performed by a Relational Database Management System (RDBMS)?
+ - tables and relations between them, constrains, can perfom:
+    - creating/alerting/deleting tables
+    - creating/deleting/alerting relations
+    - creating/alerting/deleting/searching data
+    - administration, backup/restore, transactions
+    - SQL language
+
+3. Define what is "table" in database terms.
+  - sequence of rows with same structure of columns. Every column contain same data type (text, numbers, date e.t.c.). Structure is also called "table schema".
+
+
+4. Explain the difference between a primary and a foreign key.
+  - primary key is unique in table, unique identifiyng one row. Can be constructed with data from one or more columns (composite primary key).
+  - foreign key is a pointer(relation) to record in another (or same) table.
+
+5. Explain the different kinds of relationships between tables in relational databases.
+  - one-to-many, many-to-many, one-to-one,
+
+
+6. When is a certain database schema normalized? What are the advantages of normalized databases?
+  - when all repeated data is extracted to external table and one row contain only element related data
+  - remove repeated data, easy modifiying.
+
+
+7. What are database integrity constraints and when are they used?
+  - constraints restrict data in column. 
+  - check constraint Used to deny invalid (but allowable by data type) data entering in table. - human age cannot be negative or greater than 150.
+  - unique key constraints - deny duplication of data in column.
+  - foreign key constraint - foreign key must exist to add data with this foreign key
+
+
+8. Point out the pros and cons of using indexes in a database.
+  - pros - speed up searching in data
+  - cons - slow down insertion and deletion of data. 
+
+
+9. What's the main purpose of the SQL language?
+  - DDL - Define data
+  - DML - Manipulate data
+
+
+10. What are transactions used for? Give an example.
+  - sequence ot operation executed as one. Used to secure processing of all operation or denying all if error is occured in any stage of transaction.
+  - example - bank transactions
+
+
+11. What is a NoSQL database?
+  - Non-relational database. No schema for tables/database. Have CRUD operations, indexing...
+
+
+12. Explain the classical non-relational data models.
+  - Document model (JSON based), key/value model, OOP-style ...
+  - pros - performance, sclability
+  - cons - no data restrictions, no clear document structure.
+
+13. Give few examples of NoSQL databases and their pros and cons.
+  - Redis - Ultra-fast in-memory data structures server
+  - MongoDB - Mature and powerful JSON-document database
+  - CouchDB - JSON-based document database with REST API
+  - Cassandra - Distributed wide-column database
