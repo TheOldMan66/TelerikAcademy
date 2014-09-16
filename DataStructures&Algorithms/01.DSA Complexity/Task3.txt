@@ -1,0 +1,21 @@
+What is the expected running time of the following C# code? Explain why.
+Assume the input matrix has size of n * m.
+
+long CalcSum(int[,] matrix, int row)
+{
+    long sum = 0;
+    for (int col = 0; col < matrix.GetLength(0); col++) 
+        sum += matrix[row, col];
+    if (row + 1 < matrix.GetLength(1)) 
+        sum += CalcSum(matrix, row + 1);
+    return sum;
+}
+
+Console.WriteLine(CalcSum(matrix, 0));
+
+----------------------------------------------
+for loop -> 0...cols
+recursion calls -> 0 ...rows
+Total complexity - cols * rows -> O(N*M) => LINEAR COMPLEXITY.
+
+Explatantion: complexity is linear according matrix size. Every element in matrix is visited just once.

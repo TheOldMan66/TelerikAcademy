@@ -1,0 +1,22 @@
+What is the expected running time of the following C# code? Explain why.
+Assume the input matrix has size of n * m.
+
+long CalcCount(int[,] matrix)
+{
+    long count = 0;
+    for (int row=0; row<matrix.GetLength(0); row++)
+        if (matrix[row, 0] % 2 == 0)
+            for (int col=0; col<matrix.GetLength(1); col++)
+                if (matrix[row,col] > 0)
+                    count++;
+    return count;
+}
+
+----------------------------------------------
+for row -> 0...N
+for columnt -> 0 ...M/2
+Total complexity -> O(N*M/2) => LINEAR COMPLEXITY.
+For N = 10, M = 10 -> 50 computaitons inside inner for loop.
+For N = 10, M = 20 -> 100 computaitons inside inner for loop.
+For N = 20, M = 20 -> 200 computaitons inside inner for loop.
+Explatantion: complexity is linear according matrix size. Half of elements in matrix is visited just once, other half is skipped from "%2 == 0" expression.
