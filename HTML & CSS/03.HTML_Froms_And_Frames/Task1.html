@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<style>
+		table,td {border-collapse:collapse;border:1px solid black}
+		label {display:block;font-weight:bold;text-align:right}
+		label.dateLabel {display:inline;font-weight:normal;text-align:left}
+		tfoot {text-align:center;background-color:#00FFFF}
+	</style>
+    <title>Forms and Frames-Task 1</title>
+</head>
+<body>
+    <form name="Task1" method="get">
+		<table>
+			<tr>
+				<td><label for="lName">Last name</label> </td>
+				<td colspan="3"><input id="lName" name="lastName" size="50" type="text" value="Nakov" /></td>
+			</tr>
+			<tr>
+				<td><label for="fName">First name</label> </td>
+				<td colspan="3"><input id="fName" name="firstName" size="50" type="text" value="Svetlin" /></td>
+			</tr>
+			<tr>
+				<td><label for="fAddr">Address</label> </td>
+				<td colspan="3"><textarea id="fAddr" name="address" rows="4" cols="36" >17 Hristo Botev str.
+floor 3, apt. 12 </textarea></td>
+			</tr>
+			<tr>
+				<td><label for="fCity">City</label> </td>
+				<td><input id="fCity" name="city" size="33" type="text" value="Kaspichan" /></td>
+				<td><label for="fState">State</label> </td>
+				<td><input id="fState" name="state" size="4" type="text" value="VT" /></td>
+			</tr>
+			<tr>
+				<td><label for="fZip">Zip/Postal Code</label> </td>
+				<td colspan="3"><input id="fZip" name="zipCode" size="8" type="text" value="9235" /></td>
+			</tr>
+			<tr>
+				<td><label for="fCountry">Country</label> </td>
+				<td colspan="3">
+				<select id="fCountry" name="country">
+					<option value="AR">Aruba</option>
+					<option value="BG" selected="selected">Bulgaria</option>
+					<option value="CA">Canada</option>
+					<option value="DM">Denmark</option>
+					<option value="US">United States of America</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="fPhone">Phone(country code,<br>area code, number</label> </td>
+				<td colspan="3"> (+<input id="fPhone" name="countryCode" size="5" type="text" value="359" /> ) <input name="areaCode" size="5" type="text" value="88" /> - <input name="phone" size="16" type="text" value="1234567" /></td>
+			</tr>				
+			<tr>
+				<td><label for="fEmail">E-mail</label> </td>
+				<td colspan="3"><input id="fEmail" name="e-mail" size="50" type="email" pattern="[^@]+@[^@]+\.[^@]+" value="nakov@kaspichan.org"/></td>
+			</tr>
+			<tr>
+				<td><label for="fBirtDate">Birth date</label> </td>
+				<td colspan="3">Month<input id="fBirtDate" name="birthDate" size="2" type="text" value="02" /> Day<input size="2" type="text" value="22" /> Year(4 digit)<input size="4" type="text" value="1987" /></td>
+			</tr>				
+			<tr>
+				<td><label for="fGender">Gender</label> </td>
+				<td colspan="3">
+				<select id="fGender" name="gender">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Starting date</label> </td>
+				<td colspan="3">
+					<input type="radio" id="fSpring" name="startDate" value="Spring" checked />
+					<label class="dateLabel" for="fSpring">Spring 2006</label>
+					<input type="radio" id="fSummer" name="startDate" value="Summer" />
+					<label class="dateLabel" for="fSpring">Summer 2006</label>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="fComment">Comments/Questions</label> </td>
+				<td colspan="3"><textarea id="fComment" name="address" rows="5" cols="36" >Please send me mor information about the logging</textarea></td>
+			</tr>
+			<tfoot>
+			<tr><td colspan="4">
+			<input type="submit" value="Submit"><input type="reset" value="Clear This Form">
+			</td></tr>
+			</tfoot>
+			</table>
+		</form>
+</body>
+</html>

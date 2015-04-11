@@ -1,0 +1,40 @@
+/* CSS Document */
+body{
+	background-color: #DDD;
+}
+section > div{
+	width: 460px;
+	height: 120px;
+	padding: 15px;
+	margin-bottom: 40px;
+	border: 1px solid #888;
+	position: relative;
+	background-color: #FFF;
+}
+
+span {
+	font-family: Verdana,Arial;
+	font-size: 14px;
+}
+section > div > img {
+	width: 170px;
+	height: 120px;
+	border: 1px solid #888;
+	float: left;
+	margin-right: 20px;
+}
+
+div div {
+	position: absolute;
+	bottom: 15px;
+	right: 10px;
+}
+div div input{
+	padding: 5px;
+	margin-bottom: -11px;
+}
+
+div div span{
+	color: #FFF;
+	padding: 18px;
+}
